@@ -4,6 +4,12 @@ An ultra-modern, premium, and highly interactive school landing page for **Brigh
 
 ---
 
+## 📝 Live demo: https://interactive-kindergarten-website.vercel.app/
+
+
+
+------
+
 ## 📝 Original Project Requirements (Prompt)
 
 Below is the user prompt that guided the creation of this project:
