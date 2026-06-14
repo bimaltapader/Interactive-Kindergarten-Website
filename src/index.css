@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  
+  --color-primary: #4F9CF9;
+  --color-primary-hover: #3b82f6;
+  --color-secondary: #FFD93D;
+  --color-secondary-hover: #facc15;
+  --color-accent: #FF7F50;
+  --color-accent-hover: #f97316;
+  --color-brand-bg: #F8FBFF;
+  
+  --color-dark-text: #2D3748;
+  --color-light-text: #718096;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-bg);
+  color: var(--color-dark-text);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FBFF;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom animations and utils */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Soft glow animation */
+@keyframes soft-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(79, 156, 249, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(79, 156, 249, 0.4);
+  }
+}
+
+.glow-card:hover {
+  animation: soft-glow 2s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce-slow {
+  animation: bounce-slow 4s infinite ease-in-out;
+}
+
+@keyframes cloud-float {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.cloud-float-1 {
+  animation: cloud-float 25s infinite ease-in-out;
+}
+
+.cloud-float-2 {
+  animation: cloud-float 35s infinite ease-in-out;
+}
+
+.cloud-float-3 {
+  animation: cloud-float 45s infinite ease-in-out;
+}
